@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Accessibility with CSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="header">
+    <div class="header__inner">
+      <span class="header__eyebrow">Inclusive by Design</span>
+      <h1 class="header__title">Accessible <em>Web Design</em></h1>
+      <p class="header__sub">Building experiences that work beautifully for everyone, regardless of ability or device.</p>
+    </div>
+    <div class="header__orb header__orb--1"></div>
+    <div class="header__orb header__orb--2"></div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul class="navigation-menu">
+      <li><a href="/" aria-current="page">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+
+    <aside class="sidebar" aria-label="Sidebar">
+      <p class="sidebar__label">Quick Links</p>
+      <nav aria-label="Sidebar navigation">
+        <ul class="sidebar__list">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#example">Example Text</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar__tip">
+        <span class="sidebar__tip-icon" aria-hidden="true">💡</span>
+        <p>Good accessibility benefits <strong>all</strong> users, not just those with disabilities.</p>
+      </div>
+    </aside>
+
+    <main class="main-content" id="main">
+
+      <section class="section about" id="about" aria-labelledby="about-heading">
+        <div class="section__tag" aria-hidden="true">01</div>
+        <h2 class="section__title" id="about-heading">About Us</h2>
+        <p>We are dedicated to creating accessible web designs that put people first. Our approach blends modern aesthetics with inclusive practices — because great design should be experienced by everyone.</p>
+      </section>
+
+      <section class="section features" id="features" aria-labelledby="features-heading">
+        <div class="section__tag" aria-hidden="true">02</div>
+        <h2 class="section__title" id="features-heading">Features</h2>
+        <ul class="feature-list" role="list">
+          <li class="feature-item">
+            <span class="feature-item__icon" aria-hidden="true">🧭</span>
+            <span>Clear Navigation</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-item__icon" aria-hidden="true">🔗</span>
+            <span>Identifiable Links</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-item__icon" aria-hidden="true">📐</span>
+            <span>Simple Layouts</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-item__icon" aria-hidden="true">📖</span>
+            <span>Readable Text</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-item__icon" aria-hidden="true">♿</span>
+            <span>Screen Reader Accessibility</span>
+          </li>
+        </ul>
+        <p class="section__footer-note">For more information, visit our <a href="https://example.com">Help Center</a>.</p>
+      </section>
+
+      <section class="section example" id="example" aria-labelledby="example-heading">
+        <div class="section__tag" aria-hidden="true">03</div>
+        <h2 class="section__title" id="example-heading">Example Text</h2>
+        <p>This is standard text at 16px. Clear, comfortable, and easy to read across all devices and lighting conditions.</p>
+        <p class="large-text">This text is larger for better visibility and readability at a glance.</p>
+        <div class="high-contrast-text" role="note">
+          <span class="high-contrast-text__label" aria-hidden="true">High Contrast</span>
+          Black text on a white background — maximum legibility for all users.
+        </div>
+        <span class="screen-reader-text">End of example section</span>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2050 Accessible Web Design. Made with care for everyone.</p>
+  </footer>
+
+</body>
+</html>

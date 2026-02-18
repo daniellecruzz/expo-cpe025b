@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sass Essentials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;1,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <span class="header__eyebrow">The Modern Way to Write CSS</span>
+      <h1 class="header__title">Sass <em>Essentials</em></h1>
+      <p class="header__sub">Supercharge your stylesheets with variables, mixins, and nesting.</p>
+    </div>
+    <div class="header__orb header__orb--1"></div>
+    <div class="header__orb header__orb--2"></div>
+  </header>
+
+  <main class="main">
+
+    <section class="card about">
+      <div class="card__tag">01 — Overview</div>
+      <h2 class="card__title">About Sass</h2>
+      <p class="card__body">Sass is a stylesheet language that compiles to CSS. It gives you access to powerful tools that make CSS more maintainable, readable, and fun to write — especially at scale.</p>
+    </section>
+
+    <section class="card features">
+      <div class="card__tag">02 — Features</div>
+      <h2 class="card__title">What You Get</h2>
+      <ul class="feature-list">
+        <li class="feature-item">
+          <span class="feature-item__icon">$</span>
+          <div>
+            <strong>Variables</strong>
+            <p>Store colors, fonts, and values in reusable tokens.</p>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-item__icon">@</span>
+          <div>
+            <strong>Mixins</strong>
+            <p>Define reusable chunks of styles, with optional arguments.</p>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-item__icon">{}</span>
+          <div>
+            <strong>Nesting</strong>
+            <p>Write selectors that mirror your HTML structure cleanly.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card example">
+      <div class="card__tag">03 — Example</div>
+      <h2 class="card__title">See It in Action</h2>
+      <div class="code-block">
+        <pre><code><span class="c-var">$primary</span>: <span class="c-val">#2563eb</span>;
+
+<span class="c-mixin">@mixin</span> <span class="c-fn">flex-center</span> {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+<span class="c-sel">.hero</span> {
+  <span class="c-mixin">@include</span> flex-center;
+  background: <span class="c-var">$primary</span>;
+
+  <span class="c-sel">h1</span> { color: white; }
+}</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2035 Sass Essentials.</p>
+  </footer>
+
+</body>
+</html>
