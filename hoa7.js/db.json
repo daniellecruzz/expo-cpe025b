@@ -1,0 +1,7 @@
+{
+  "weather": [
+    { "city": "Berlin", "weather": { "wind": {"speed":16,"deg":117}, "clouds":0,"temp":5,"precipitation":0 } },
+    { "city": "Oslo", "weather": { "wind": {"speed":8,"deg":170}, "clouds":0,"temp":0,"precipitation":0 } },
+    { "city": "Yakutsk", "weather": { "wind": {"speed":0,"deg":0}, "clouds":0,"temp":-40,"precipitation":0 } }
+  ]
+}
